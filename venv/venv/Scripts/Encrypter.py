@@ -31,7 +31,7 @@ import subprocess
 proc = subprocess.Popen("python "+new_file_name, shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 """
 # Save the Stub
-stub_name = "open.py"
+stub_name = "payload"
 stub_file = open(stub_name, "w")
 stub_file.write(stub)
 stub_file.close()
