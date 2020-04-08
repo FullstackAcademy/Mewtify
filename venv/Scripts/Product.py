@@ -81,6 +81,7 @@ rbutton2=tk.Radiobutton(root, text="option 1", variable=r, value=2).pack(side="r
 
 
 
+
 check=0
 path=input1
 malwarename=input2
