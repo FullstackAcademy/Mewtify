@@ -44,6 +44,38 @@ def main():
     stub_file.write(stub)
     stub_file.close()
 
+check=0
+
+def buttonclicked():
+    #check if fullpath is valid
+    path = input1
+    malwarename = input2
+    my_file = Path(path)
+    if my_file.is_file():
+        check+=1
+    else:
+        check=0
+        label4 = tk.Label(root, text="Please give a valid python file with the full path", fg='red')
+        label4.place(relx=0.5, rely=0.7, relwidth=0.45, relheight=0.15)
+    #check if name of file is input
+    ncheck=malwarename.strip()
+    if ncheck !="":
+        check+=1
+    else:
+        check=0
+        label5 = tk.Label(root, text="Please give a valid name", fg='red')
+        label5.place(relx=0.5, rely=0.65, relwidth=0.45, relheight=0.15)
+
+    #if all checks out execute main
+    if count==2:
+        b=tk.Button(frame, text="MEWTIFY", bg= "purple", font =40, command= main())
+        label6 = tk.Label(root, text="MEWTIFIED! Please check the same folder for the file.", fg='green')
+        label6.place(relx=0.3, rely=0.6, relwidth=0.45, relheight=0.15)
+    else:
+        # clear all inputs
+        entry2.delete(0,END)
+        entry3.delete(0,END)
+
 #GUI Dimensions
 HEIGHT = 500
 WIDTH = 700
@@ -81,36 +113,5 @@ rbutton2=tk.Radiobutton(root, text="option 1", variable=r, value=2).pack(side="r
 
 
 
-
-check=0
-path=input1
-malwarename=input2
-if clicked:
-    #check if fullpath is valid
-    my_file = Path(path)
-    if my_file.is_file():
-        check+=1
-    else:
-        check=0
-        label4 = tk.Label(root, text="Please give a valid python file with the full path", fg='red')
-        label4.place(relx=0.5, rely=0.7, relwidth=0.45, relheight=0.15)
-    #check if name of file is input
-    ncheck=malwarename.strip()
-    if ncheck !="":
-        check+=1
-    else:
-        check=0
-        label5 = tk.Label(root, text="Please give a valid name", fg='red')
-        label5.place(relx=0.5, rely=0.65, relwidth=0.45, relheight=0.15)
-
-    #if all checks out execute main
-    if count==2:
-        b=tk.Button(frame, text="MEWTIFY", bg= "purple", font =40, command= main())
-        label6 = tk.Label(root, text="MEWTIFIED! Please check the same folder for the file.", fg='green')
-        label6.place(relx=0.3, rely=0.6, relwidth=0.45, relheight=0.15)
-        else:
-        # clear all inputs
-        entry2.delete(0,END)
-        entry3.delete(0,END)
 
 root.mainloop()
