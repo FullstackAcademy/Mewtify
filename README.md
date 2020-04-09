@@ -24,7 +24,7 @@ This program was built to bring awareness to our over reliance on anti-virus. Th
 **Credits:**  
   
 Thank to the staff of Fullstack Cyber for the assistance with debugging.  
-The bulk of the code was inspired by guilhermej.  
+The crypter was learned from guilhermej.  
 JPEG portion inspired by shikomizue
 
 We do not own any of the images. All images belong to their respective owner and will be remove upon request
