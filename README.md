@@ -21,7 +21,7 @@ How it operates:
 
 Credits:  
 Thank to the staff of Fullstack Cyber for the assistance with debugging.  
-The bulk of the code was inspired by guilhermej.
+The bulk of the code was inspired by guilhermej.  
 JPEG portion inspired by shikomizue
 
 We do not own any of the images. All images belong to their respective owner and will be remove upon request
