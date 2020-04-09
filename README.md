@@ -5,7 +5,7 @@ This program was built to bring awareness to our over reliance on anti-virus. Th
 **Requirements:**  
 - Python3 to be installed on both self and target computers.
 - One malicious malware  
-- pyaes has to be imported 
+- pyaes has to be installed 
   
 **Features:**  
 - Python mutation available for windows(Mewtify4Windows.py) and linux(Mewtify4Linux.py)
