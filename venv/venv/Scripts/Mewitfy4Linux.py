@@ -78,7 +78,7 @@ frame.place(relx=0.5, rely=0.05, relwidth=1, relheight=0.2, anchor='n')
 label = tk.Label(frame, text="Welcome to Mewtify!", font=("-weight bold", 27), bg='#80C1FF')
 label.place(relx=0.3, rely=0, relwidth=.5, relheight=1)
 # INPUT 1
-label2 = tk.Label(root, text="Malicous Software with full path:", anchor='w', font=15)
+label2 = tk.Label(root, text="Malicious Software with full path:", anchor='w', font=15)
 label2.place(relx=0, rely=0.35, relwidth=0.4, relheight=0.10)
 filebutton = tk.Button(root, text="Select", font=40, command=fname)
 filebutton.place(relx=.5, rely=0.35, relwidth=0.45, relheight=0.09)
