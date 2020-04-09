@@ -16,7 +16,7 @@ How it operates:
 2- Obtain a malicious python file. (This will work only for python files)  
 3- Open up Mewtify  
 4- Select the python file and input the name of your payload.  
-5- Press Mewtify and a malicious file should be created in the same folder.
+5- Press Mewtify and a malicious file should be created in the same folder once the Mewtify button is purple again.  
 6- This malware should bypass any antivirus scans (to confirm run it on Virus Total). It is also capable of running itself on target computers.  
 
 Credits:  
