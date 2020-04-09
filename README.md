@@ -14,7 +14,7 @@ This program was built to bring awareness to our over reliance on anti-virus. Th
   
 **How it operates:**  
   
-1- Select a mutation you want to run.  
+1- Select a mutation you want to run in the upper left(the default is windows python).  
 2- Obtain a malicious python file. (This will work only for python files)  
 3- Open up Mewtify  
 4- Select the python file and input the name of your payload.  
