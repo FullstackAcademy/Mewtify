@@ -4,8 +4,13 @@ This program was built to bring awareness to our over reliance on anti-virus. Th
 
 Requirements:  
 - Python3 to be installed on both self and target computers.
-- One malicious malware
-
+- One malicious malware  
+- pyaes has to be imported 
+  
+Features:  
+- Python mutation available for windows and linux
+- JPEG mutation availlable for windows
+  
 How it operates:  
 1- Obtain a malicious python file. (This will work only for python files)  
 2- Open up Mewtify  
@@ -16,5 +21,6 @@ How it operates:
 Credits:  
 Thank to the staff of Fullstack Cyber for the assistance with debugging.  
 The bulk of the code was inspired by guilhermej.
+JPEG portion inspired by shikomizue
 
 We do not own any of the images. All images belong to their respective owner and will be remove upon request
