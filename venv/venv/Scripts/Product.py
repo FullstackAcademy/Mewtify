@@ -4,6 +4,7 @@ import binascii, pyaes, sys, base64, os.path, os
 from tkinter import *
 from pathlib import Path
 from tkinter.font import Font
+from tkinter.filedialog import askopenfilename
 
 def main():
     # Open file
@@ -44,37 +45,6 @@ def main():
     stub_file.write(stub)
     stub_file.close()
 
-check=0
-def buttonclicked():
-    #check if fullpath is valid
-    check = 0
-    path = input1
-    malwarename = input2
-    my_file = Path(path)
-    # if all checks out execute main
-    while check!=2:
-        if my_file.is_file():
-            check+=1
-        else:
-            check=0
-            label4 = tk.Label(root, text="Please give a valid python file with the full path", fg='red')
-            label4.place(relx=0.5, rely=0.7, relwidth=0.45, relheight=0.15)
-        #check if name of file is input
-        ncheck=malwarename.strip()
-        if ncheck !="":
-            check+=1
-        else:
-            check=0
-            label5 = tk.Label(root, text="Please give a valid name", fg='red')
-            label5.place(relx=0.5, rely=0.65, relwidth=0.45, relheight=0.15)
-    if check==2:
-        b=tk.Button(frame, text="MEWTIFY", bg= "purple", font =40, command= main())
-        label6 = tk.Label(root, text="MEWTIFIED! Please check the same folder for the file.", fg='green')
-        label6.place(relx=0.3, rely=0.6, relwidth=0.45, relheight=0.15)
-    else:
-        # clear all inputs
-        entry2.delete(0,END)
-        entry3.delete(0,END)
 
 #GUI Dimensions
 HEIGHT = 500
@@ -93,8 +63,8 @@ label.place(relx=0.3, rely=0, relwidth=.5, relheight=1)
 #INPUT 1
 label2=tk.Label(root, text="Malicous Software with full path:", anchor='w', font = 15)
 label2.place(relx=0, rely=0.35, relwidth=0.47, relheight=0.15)
-entry2 = tk.Entry(root, font=40)
-entry2.place(relx=.5, rely=0.35, relwidth=0.45, relheight=0.09)
+filebutton = tk.Button(root, text="Select" ,font=40,command=fname)
+filebutton.place(relx=.5, rely=0.35, relwidth=0.45, relheight=0.09)
 #INPUT2
 label3=tk.Label(root, text="Name of Mutated Software:", anchor='w', font = 15)
 label3.place(relx=0, rely=0.5, relwidth=0.45, relheight=0.15)
