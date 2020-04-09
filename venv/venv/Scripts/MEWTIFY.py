@@ -189,12 +189,12 @@ label = tk.Label(frame, text="Welcome to Mewtify!", font=("-weight bold", 27), b
 label.place(relx=0.3, rely=0, relwidth=.5, relheight=1)
 # INPUT 1
 label2 = tk.Label(root, text="Malicious Software with full path:", anchor='w', font=15)
-label2.place(relx=0, rely=0.35, relwidth=0.4, relheight=0.10)
+label2.place(relx=0, rely=0.35, relwidth=0.4, relheight=0.05)
 filebutton = tk.Button(root, text="Select", font=40, command=fname)
 filebutton.place(relx=.5, rely=0.35, relwidth=0.45, relheight=0.09)
 # INPUT2
 label3 = tk.Label(root, text="Name of Mutated Software:", anchor='w', font=15)
-label3.place(relx=0, rely=0.5, relwidth=0.4, relheight=0.10)
+label3.place(relx=0, rely=0.5, relwidth=0.4, relheight=0.05)
 entry3 = tk.Entry(root, font=40)
 entry3.place(relx=.5, rely=0.5, relwidth=0.45, relheight=0.09)
 entry3.focus_set()
