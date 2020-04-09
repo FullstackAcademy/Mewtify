@@ -12,6 +12,7 @@ This program was built to bring awareness to our over reliance on anti-virus. Th
 - JPEG mutation availlable for windows
   
 **How it operates:**  
+  
 1- Select a mutation you want to run.  
 2- Obtain a malicious python file. (This will work only for python files)  
 3- Open up Mewtify  
@@ -20,6 +21,7 @@ This program was built to bring awareness to our over reliance on anti-virus. Th
 6- This malware should bypass any antivirus scans (to confirm run it on Virus Total). It is also capable of running itself on target computers.  
 
 **Credits:**  
+  
 Thank to the staff of Fullstack Cyber for the assistance with debugging.  
 The bulk of the code was inspired by guilhermej.  
 JPEG portion inspired by shikomizue
