@@ -8,8 +8,9 @@ This program was built to bring awareness to our over reliance on anti-virus. Th
 - pyaes has to be installed 
   
 **Features:**  
-- Python mutation available for windows(Mewtify4Windows.py) and linux(Mewtify4Linux.py)
-- JPEG mutation availlable for windows(Mewtify4JPG.py)
+- Python mutation available for windows  
+- Python mutation available for linux  
+- JPEG mutation availlable for windows
   
 **How it operates:**  
   
