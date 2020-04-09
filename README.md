@@ -1,6 +1,9 @@
 # Mewtify
 Malware Mutation brought to you by Cephamist and jzheng6182  
 This program was built to bring awareness to our over reliance on anti-virus. This program is built so any script kiddy should be able to slip a maliciaous python coded payload pass anitivirus.  
+Requirements:  
+Python3 to be installed on both self and target computers.
+One malicious software  
 How it operates:  
 1- Obtain a malicious python file. (This will only for for python files)  
 2- Open up Mewtify  
