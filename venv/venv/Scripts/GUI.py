@@ -36,9 +36,12 @@ def x():
 #button mashing
 button=tk.Button(root, text="MEWTIFY", bg= "purple", font =40,command=x())
 button.place(relx=0.3, rely=0.8, relwidth=0.45, relheight=0.15)
-r = IntVar()
-rbutton=tk.Radiobutton(root, text="option 2", variable=r, value=1).pack(side="right")
-rbutton2=tk.Radiobutton(root, text="option 1", variable=r, value=2).pack(side="right")
+
+button=tk.Button(root, text="click to exit", bg= "red", font =10,command=root.destroy)
+button.place(relx=.8, rely=0.8, relwidth=0.15, relheight=0.05)
+# r = IntVar()
+# rbutton=tk.Radiobutton(root, text="option 2", variable=r, value=1).pack(side="right")
+# rbutton2=tk.Radiobutton(root, text="option 1", variable=r, value=2).pack(side="right")
 
 
 
