@@ -1,6 +1,6 @@
 # **Mewtify**
 *Malware Mutation brought to you by Cephamist and jzheng6182*  
-This program was built to bring awareness to our over reliance on anti-virus. This program is built so that any script kiddie can slip a malicious python-coded payload passed any antivirus.  
+This program was built to bring awareness to our over reliance on anti-virus. This program is built so that any script kiddie can slip a malicious python-coded payload passed any antivirus scan.  
 
 **Requirements:**  
 - Python3 to be installed on both self and target computers.
