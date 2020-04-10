@@ -10,11 +10,11 @@ import string
 
 def main():
     #this will determine the target os of malware and the type of malware
-    if choice s= =1:
+    if choice s==1:
         pythwin()
-    if choice s= =2:
+    if choice s==2:
         pythlin()
-    if choice s= =3:
+    if choice s==3:
         jpgwin()
     return
 
