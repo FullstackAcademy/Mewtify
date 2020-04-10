@@ -5,7 +5,8 @@ from tkinter import *
 from pathlib import Path
 from tkinter.font import Font
 from tkinter.filedialog import askopenfilename
-
+import secrets
+import string
 
 def main():
     global entry3
@@ -18,7 +19,7 @@ def main():
     file.close()
 
     # Crypt file data (Using AES)
-    key = bytearray("0123456789abcdef", 'UTF-8')  # 16 bytes key - change for your key
+    key = bytearray(ran_string, 'UTF-8')  # 16 bytes key - change for your key
     aes = pyaes.AESModeOfOperationCTR(key)
     crypto_data = aes.encrypt(file_data)
 
@@ -57,7 +58,9 @@ def fname():
     return malwarename
 
 
-
+N=16
+ran_string = ''.join(secrets.choice(string.ascii_uppercase + string.digits)
+                                                  for i in range(N))
 
 # GUI Dimensions
 HEIGHT = 500
