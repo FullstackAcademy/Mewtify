@@ -1,9 +1,9 @@
 # **Mewtify**
 *Malware Mutation brought to you by Cephamist and jzheng6182*  
-This program was built to bring awareness to our over reliance on anti-virus. This program is built so that any script kiddie can slip a malicious python-coded payload passed any antivirus scan.  
+A easy to use GUI interface pentester tool. It is a AES encrypted scantime crypter that get through all antivirus scan. 
 
 **Requirements:**  
-- Python3 to be installed on both self and target computers.
+- Python3 must be installed on both the host and target computers.
 - One malicious malware  
 - pyaes has to be installed 
   
@@ -28,3 +28,4 @@ The crypter was learned from guilhermej https://github.com/guilhermej/scantime_p
 JPEG portion inspired by shikomizue
 
 We do not own any of the images. All images belong to their respective owner and will be remove upon request
+Hydro-king@DeviantArt Mew(c)Pokemon
