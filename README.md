@@ -8,9 +8,10 @@ A easy to use GUI interface pentester tool. It is a AES encrypted scantime crypt
 - pyaes has to be installed 
   
 **Features:**  
-- Python mutation available for windows  
-- Python mutation available for linux  
-- JPEG mutation availlable for windows
+- Python mutation available for Windows  
+- Python mutation available for Linux  
+- JPEG mutation availlable for Windows
+- PHP mutation availlable for Windows
   
 **How it operates:**  
   
