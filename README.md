@@ -28,5 +28,5 @@ Thank to the staff of Fullstack Cyber for the assistance with debugging.
 The crypter was learned from guilhermej https://github.com/guilhermej/scantime_py_crypter.  
 JPEG portion inspired by shikomizue
 
-We do not own any of the images. All images belong to their respective owner and will be remove upon request
+We do not own any of the images. All images belong to their respective owner and will be remove upon request.
 Hydro-king@DeviantArt, Mew(c)Pokemon
